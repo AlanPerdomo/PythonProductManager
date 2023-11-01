@@ -7,8 +7,8 @@ print("Opened database successfully")
 
 comando = conn.cursor()
 comando.execute(
-    """CREATE TABLE IF NOT EXISTS Agenda (
-    id INTEGER PRIMARY KEY NOT NULL, Nome TEXT NOT NULL, Telefone CHAR(11) NOT NULL);"""
+    """CREATE TABLE IF NOT EXISTS produto(
+    id SERIAL PRIMARY KEY NOT NULL, Nome TEXT NOT NULL, Codigo INTEGER NOT NULL, Preco float NOT NULL);"""
 )
 conn.commit()
 print("Table created successfully")
