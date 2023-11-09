@@ -17,7 +17,6 @@ Em construção.
 - [PostgreSQL](https://www.postgresql.org/)
 - [Psycopg2](https://www.psycopg.org/)
 
-
 ### Interface
 
 - [Tkinter](https://docs.python.org/3/library/tkinter.html)
