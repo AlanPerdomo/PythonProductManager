@@ -86,11 +86,18 @@ class PrincipalBD:
 
     def limparTela(self):
         try:
-            self.txtCodigo.delete(0, tk.END)
-            self.txtNome.delete(0, tk.END)
-            self.txtPreco.delete(0, tk.END)
-            self.txtPorcentagemExtra.config(text="R$0.00")
-            print("Campos limpos com sucesso")
+            if (
+                self.txtCodigo.get() == ""
+                and self.txtNome.get() == ""
+                and self.txtPreco.get() == ""
+            ):
+                print("Campos ja estão limpos")
+            else:
+                self.txtCodigo.delete(0, tk.END)
+                self.txtNome.delete(0, tk.END)
+                self.txtPreco.delete(0, tk.END)
+                self.txtPorcentagemExtra.config(text="R$0.00")
+                print("Campos limpos com sucesso")
         except Exception as e:
             print(f"Erro ao limpar os campos: {e}")
 
