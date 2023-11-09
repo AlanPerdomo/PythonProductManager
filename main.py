@@ -196,8 +196,8 @@ class TextRedirector:
         self.tag = tag  # Um rótulo que pode ser usado para aplicar formatação ao texto inserido.
 
     def write(self, str):
-        self.text_widget.insert(tk.END, str, (self.tag,))
-        self.text_widget.see(tk.END)
+        self.text_widget.insert(tk.END, str, (self.tag,)) # Insere o texto no console da janela do programa.
+        self.text_widget.see(tk.END) # Move para o final do console, sempre exibindo a ultima atualização.
 
 
 # Cria a janela principal do programa.
