@@ -12,18 +12,21 @@ Em construção.
 
 - Python 3.9.7
 
+### Interface
+
+- [Tkinter](https://docs.python.org/3/library/tkinter.html)
+
+![Tela Principal](https://github.com/AlanPerdomo/PythonProductManager/blob/main/assets/telaprincipal.png)
+
+![Tela Lista de Produtos](https://github.com/AlanPerdomo/PythonProductManager/blob/main/assets/listadeprodutos.png)
+
 ### Banco de dados
 
 - [PostgreSQL](https://www.postgresql.org/)
 - [Psycopg2](https://www.psycopg.org/)
 
-### Interface
+![Banco de dados](https://github.com/AlanPerdomo/PythonProductManager/blob/main/assets/bancodedados.png)
 
-- [Tkinter](https://docs.python.org/3/library/tkinter.html)
-
-![Tela Principal](https://github.com/AlanPerdomo/PythonProductManager/blob/main/telaprincipal.jpg)
-
-![Tela Lista de Produtos](https://github.com/AlanPerdomo/PythonProductManager/blob/main/listadeprodutos.jpg)
 
 ## Licença
 
