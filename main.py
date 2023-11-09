@@ -1,4 +1,5 @@
 import tkinter as tk
+import sys
 import crud as crud
 
 
@@ -27,6 +28,13 @@ class PrincipalBD:
         self.btnExibirProdutos = tk.Button(
             win, text="Exibir Produtos", command=self.exibirProdutos
         )
+        self.btnLimparConsole = tk.Button(
+            win, text="Limpar Console", command=self.limparConsole
+        )
+
+        self.console_text = tk.Text(win, wrap=tk.WORD, height=5, width=50)
+        self.scrollbar = tk.Scrollbar(win, command=self.console_text.yview)
+        self.console_text.configure(yscrollcommand=self.scrollbar.set)
 
         self.lbCodigo.place(x=100, y=50)
         self.txtCodigo.place(x=250, y=50)
@@ -46,7 +54,11 @@ class PrincipalBD:
         self.btnLimpar.place(x=400, y=250)
         self.btnSair.place(x=100, y=300)
         self.btnExibirProdutos.place(x=200, y=300)
+        self.btnLimparConsole.place(x=345, y=300)
+        self.console_text.place(x=100, y=350)
+        self.scrollbar.place(x=500, y=350, height=90)
 
+        sys.stdout = TextRedirector(self.console_text, "stdout")
         self.txtPreco.bind("<KeyRelease>", self.calcularPorcentagemExtra)
 
     def cadastrarProduto(self):
@@ -156,9 +168,22 @@ class PrincipalBD:
         except Exception as e:
             print(f"Erro ao exibir os produtos: {e}")
 
+    def limparConsole(self):
+        self.console_text.delete("1.0", tk.END)
+
+
+class TextRedirector:
+    def __init__(self, text_widget, tag):
+        self.text_widget = text_widget
+        self.tag = tag
+
+    def write(self, str):
+        self.text_widget.insert(tk.END, str, (self.tag,))
+        self.text_widget.see(tk.END)
+
 
 janela = tk.Tk()
 principal = PrincipalBD(janela)
 janela.title("PPM - Python Product Manager")
-janela.geometry("600x350")
+janela.geometry("600x500")
 janela.mainloop()
