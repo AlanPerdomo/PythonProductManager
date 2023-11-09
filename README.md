@@ -35,7 +35,5 @@ Este projeto está sob a Licença MIT - consulte o arquivo [LICENSE](LICENSE) pa
 
 ## Sobre o autor
 
-Alan Perdomo - [GitHub](https://github.com/AlanPerdomo)
-
-- Alan Perdomo - [alanperdomo@hotmail.com](mailto:alanperdomo@hotmail.com)
+- Alan Perdomo - [alanperdomo@hotmail.com](mailto:alanperdomo@hotmail.com) - [GitHub](https://github.com/AlanPerdomo)
 - Link do projeto: [PPM - Python Product Manager](https://github.com/AlanPerdomo/PythonProductManager)
