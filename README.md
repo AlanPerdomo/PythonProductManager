@@ -22,9 +22,9 @@ Em construção.
 
 - [Tkinter](https://docs.python.org/3/library/tkinter.html)
 
-![Sua imagem](https://github.com/AlanPerdomo/PythonProductManager/blob/main/telaprincipal.jpg)
+![Tela Principal](https://github.com/AlanPerdomo/PythonProductManager/blob/main/telaprincipal.jpg)
 
-![Sua imagem](https://github.com/AlanPerdomo/PythonProductManager/blob/main/listadeprodutos.jpg)
+![Tela Lista de Produtos](https://github.com/AlanPerdomo/PythonProductManager/blob/main/listadeprodutos.jpg)
 
 ## Licença
 
