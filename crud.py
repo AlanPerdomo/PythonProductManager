@@ -3,7 +3,7 @@ import psycopg2
 
 class AppDB:
     def __init__(self):
-        print("Método Construtor")
+        print("Conectando ao banco de dados")
 
     def abrirConexao(self):
         try:
@@ -79,6 +79,22 @@ class AppDB:
         except (Exception, psycopg2.Error) as error:
             if self.connection:
                 print("Falha ao excluir dados", error)
+        finally:
+            if self.connection:
+                cursor.close()
+                self.connection.close()
+                print("Conexão fechada")
+
+    def getProdutos(self):
+        try:
+            self.abrirConexao()
+            cursor = self.connection.cursor()
+            cursor.execute("SELECT * FROM public.produto")
+            produtos = cursor.fetchall()
+            return produtos
+        except (Exception, psycopg2.Error) as error:
+            if self.connection:
+                print("Falha ao buscar dados", error)
         finally:
             if self.connection:
                 cursor.close()
